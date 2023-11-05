@@ -3,7 +3,7 @@ export type SiteConfig = typeof siteConfig
 export const siteConfig = {
   name: "Sneaker Land",
   description: "Best Online Shoe Shop In The Game",
-  icon: "/favicon.ico",
+  icon: "/blue-letter-s-png-png-favpng-vPiwErhFg5LWdKZer29244npE-removebg-preview.png",
   footer: [
     { name: "Home", href: "/" },
     { name: "About", href: "#" },
