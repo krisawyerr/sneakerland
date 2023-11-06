@@ -28,10 +28,10 @@ export function ProductGallery({product}: Props) {
               <span className="absolute inset-0 overflow-hidden rounded-md">
                 <Image
                   placeholder="blur"
-                  blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(200, 200))}`}
+                  blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(96, 96))}`}
                   src={urlForImage(image).url()}
-                  width={200}
-                  height={200}
+                  width={96}
+                  height={96}
                   alt=""
                   className="h-full w-full object-cover object-center"
                 />
@@ -49,12 +49,12 @@ export function ProductGallery({product}: Props) {
       <div className="aspect-h-1 aspect-w-1 w-full">
         <Image
           placeholder="blur"
-          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(600, 750))}`}
+          blurDataURL={`data:image/svg+xml;base64,${toBase64(shimmer(326, 456))}`}
           priority
           src={urlForImage(product.images[selectedImage]).url()}
           alt={`Main ${product.name} image`}
-          width={600}
-          height={750}
+          width={326}
+          height={456}
           className="h-full w-full border-2 border-gray-200 object-cover object-center shadow-sm dark:border-gray-800 sm:rounded-lg"
         />
       </div>

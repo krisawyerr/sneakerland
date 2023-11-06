@@ -48,7 +48,7 @@ export function CartItems() {
               src={urlForImage(product.images[0]).url()}
               alt={product.name}
               width={200}
-              height={200}
+              height={100}
               className="h-24 w-24 rounded-md border-2 border-gray-200 object-cover object-center dark:border-gray-800 sm:h-48 sm:w-48"
             />
           </div>
@@ -64,10 +64,6 @@ export function CartItems() {
                   </h3>
                 </div>
                 <p className="mt-1 text-sm font-medium">{formatCurrencyString({value: product.price, currency: product.currency})}</p>
-                <p className="mt-1 text-sm font-medium">
-                  Size: {/* @ts-ignore */}
-                  <strong>{getSizeName(product.price_data.size)}</strong>
-                </p>
               </div>
 
               <div className="mt-4 sm:mt-0 sm:pr-9">
