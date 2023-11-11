@@ -20,7 +20,7 @@ export function ProductInfo({product}: Props) {
   const isInCart = !!cartDetails?.[product._id]
   const { toast } = useToast()
 
-  function addToCart() {
+  /* function addToCart() {
     const item = {
       ...product,
       product_data: {
@@ -42,7 +42,36 @@ export function ProductInfo({product}: Props) {
     })
     console.log("Product ID:", product.id);
     console.log("Type of ID:", typeof product.id);
+  } */
+
+  function addToCart() {
+    const item = {
+      ...product,
+      product_data: {
+        size: selectedSize
+      }
+    }
+  
+    // Always add a new item, regardless of whether it's already in the cart
+    addItem(item);
+  
+    toast({
+      title: `${item.name} (${getSizeName(selectedSize)})`,
+      description: "Product added to cart",
+      action: (
+        <Link href="/cart">
+          <Button variant="link" className="gap-x-2 whitespace-nowrap">
+            <span>Open cart</span>
+            <ArrowRight className="h-5 w-5"/>
+          </Button>
+        </Link>
+      )
+    });
+  
+    console.log("Product ID:", product.id);
+    console.log("Type of ID:", typeof product.id);
   }
+  
 
   return (
     <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
